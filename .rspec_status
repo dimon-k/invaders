@@ -1,0 +1,8 @@
+example_id                                      | status | run_time        |
+----------------------------------------------- | ------ | --------------- |
+./spec/invaders/catalog_spec.rb[1:1]            | passed | 0.00054 seconds |
+./spec/invaders/invader_detector_spec.rb[1:1:1] | passed | 0.00122 seconds |
+./spec/invaders/invader_detector_spec.rb[1:2:1] | passed | 0.00021 seconds |
+./spec/invaders/radar_spec.rb[1:1]              | passed | 0.00162 seconds |
+./spec/invaders_spec.rb[1:1]                    | passed | 0.0007 seconds  |
+./spec/invaders_spec.rb[1:2]                    | failed | 0.01632 seconds |
