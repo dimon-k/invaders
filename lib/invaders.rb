@@ -21,6 +21,8 @@ module Invaders
           radar_result: Invaders::Radar.new.call
         ).call
       end
+
+      true
     end
   end
 
