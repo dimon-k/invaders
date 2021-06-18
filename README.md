@@ -1,35 +1,99 @@
 # Invaders
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/invaders`. To experiment with that code, run `bin/console` for an interactive prompt.
+## Development assignment
 
-TODO: Delete this and the text above, and describe your gem
+Space invaders are upon us!
+You were shortlisted as one of the great minds to help us track them down.
 
-## Installation
+Your Ruby application must take a radar sample as an argument and reveal possible locations of those pesky invaders.
+Good luck!
 
-Add this line to your application's Gemfile:
+### Requirements:
+- No image detection, this is all about ASCII patterns
+- Good OOP architecture is a must. This is a perfect opportunity to demonstrate the SOLID design principle experience.
+- Fully tested code with RSpec
 
-```ruby
-gem 'invaders'
+### Tips:
+- The noise in the radar can be either false positives or false negatives
+- Think of edge cases ... pun intended ;)
+
+### Known invaders:
+```
+~~~~
+--o-----o--
+---o---o---
+--ooooooo--
+-oo-ooo-oo-
+ooooooooooo
+o-ooooooo-o
+o-o-----o-o
+---oo-oo---
+~~~~
+
+~~~~
+---oo---
+--oooo--
+-oooooo-
+oo-oo-oo
+oooooooo
+--o--o--
+-o-oo-o-
+o-o--o-o
+~~~~
 ```
 
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install invaders
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/invaders.
+### Example radar sample:
+```
+~~~~
+----o--oo----o--ooo--ooo--o------o---oo-o----oo---o--o---------o----o------o-------------o--o--o--o-
+--o-o-----oooooooo-oooooo---o---o----o------ooo-o---o--o----o------o--o---ooo-----o--oo-o------o----
+--o--------oo-ooo-oo-oo-oo-----O------------ooooo-----oo----o------o---o--o--o-o-o------o----o-o-o--
+-------o--oooooo--o-oo-o--o-o-----oo--o-o-oo--o-oo-oo-o--------o-----o------o-ooooo---o--o--o-------
+------o---o-ooo-ooo----o-----oo-------o---oo-ooooo-o------o----o--------o-oo--ooo-oo-------------o-o
+-o--o-----o-o---o-ooooo-o-------oo---o---------o-----o-oo-----------oo----ooooooo-ooo-oo------------
+o-------------ooooo-o--o--o--o-------o--o-oo-oo-o-o-o----oo------------o--oooo--ooo-o----o-----o--o-
+--o-------------------------oo---------oo-o-o--ooo----oo----o--o--o----o--o-o-----o-o------o-o------
+-------------------o----------o------o--o------o--------o--------o--oo-o-----oo-oo---o--o---o-----oo
+----------o----------o---o--------------o--o----o--o-o------------oo------o--o-o---o-----o----------
+------o----o-o---o-----o-o---o-----oo-o--------o---------------------------------o-o-o--o-----------
+---------------o-------o-----o-------o-------------------o-----o---------o-o-------------o-------oo-
+-o--o-------------o-o-----o--o--o--oo-------------o----ooo----o-------------o----------oo----o---o-o
+-o--o-------------o----oo------o--o-------o--o-----o-----o----o-----o--o----o--oo-----------o-------
+-o-----oo-------o------o----o----------o--o----o-----o-----o-------o-----------o---o-o--oooooo-----o
+-o--------o-----o-----o---------oo----oo---o-o---------o---o--oooo-oo--o-------o------oo--oo--o-----
+------------o---------o---------o----oooo-------------oo-oo-----ooo-oo-----o-------o-oo-oooooooo---o
+----------------------o------------oooooooo---o-----o-------o--oooooo-o------------o-o-ooooooo-o----
+------------o------o---o---o-------oo-oo--o--o---------o--o-o-o-ooooo-o--------------oo-o----o-oo-o-
+---o-o----------oo-------oo----o----oooooooo-------o----o-o-o-o-----o-o-----o----------ooo-oo--o---o
+-o-o---------o-o---------------o--o--o--ooo---ooo-------o------oo-oo------------o--------o--o-o--o--
+-------oo---------------------------o-oo----------o------o-o-------o-----o----o-----o-oo-o-----o---o
+---o--------o-----o-------o-oo-----oo--oo-o----oo----------o--o---oo------oo----o-----o-------o-----
+---o--ooo-o---------o-o----o------------o---------o----o--o-------o----o--------o----------------oo-
+---o------o----------------o----o------o------o---oo-----------o-------------o----------oo---------o
+--oo---------------o--o------o---o-----o--o-------------o------o-------o-----o-----o----o------o--o-
+-o-------o----------o-o-o-------o-----o--o-o-----------o-oo-----------o------o---------o-----o-o----
+----------o----o-------o----o--o------o------------o---o---------------oo----o-----ooo--------------
+----o--------oo----o-o----o--o------ooo----o-oooo---o--o-oo--------o-oo-----o-o---o-o--o-----oo-----
+------o--------o-ooooo----o---o--o-----o---------------o-o-------o-----o----------------------------
+o-------oo----o--oooooo-o---o--o------oooo----------o-oo-------o---o----------o------oo-------------
+-o---o----------o--oo-oo-o---o-----o-o-----------------------oo--o------o------o--------------------
+-----oo-o-o-o---ooooooooo----o----o--------o--o---oo---o------------o----------o-o---o------o-o--oo-
+------o------o---ooo-o---------------------------o--o---o---o----o--o-------o-----o------o----o----o
+-------o----------ooo-o-----o----o---o--o-oo--o--o-o--o------o--o-oo---ooo------------------------o-
+-o-------o------o-o--ooo--o---o---oo-----o----o-------------o----o-ooo-o------o--o-o------o-o-------
+---oo--o---o-o---------o---o--------------o--o-----o-------o-----o--o---o-oo--------o----o----o-----
+o------o----oo-o-----------oo--o---o--------o-o------o-------o-o------o-oo---------o-----oo---------
+----o--o---o-o-----------o---o------------o-------o----o--o--o--o-o---------------o-----------------
+-------oo--o-o-----o-----o----o-o--o----------------------o-------o------o----oo----ooo---------o---
+o-----oo-------------------o--o-----o-----------o------o-------o----o-----------o----------------o--
+--o---o-------o------------o--------------------o----o--o-------------oo---o---------oo--------o----
+--o--------o---------o------------o------o-------o------------o-------o---o---------ooooo-----------
+------o--------------o-o-o---------o---o-------o--o-----o-------o-o----------o-----oo-ooo----------o
+--o---------------o----o--oo-------------o---------o-------------------oo---------oo-o-ooo----------
+-o-----------o------ooo----o----------------ooo-----o--------o--o---o-----------o-o-oooooo--------oo
+-o---o-------o---o-oooo-----o-------------------o----oo-----------------o--o--------o--o------o--o--
+-------o---o------oooooo--o----ooo--o--------o-------o----------------------------oo-oo-o--o--------
+o--oo------o-----oo--o-oo------------oo--o------o--o-------------oo----o------------oooo-o------oo--
+-----o----------ooooooooo--------------oo--------------oo-----o-----o-o--o------o----------o----o---
+~~~~
+```
